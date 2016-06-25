@@ -45,3 +45,20 @@ set mouse=a
 set cursorline "underline the line where the cursor is
 set showmatch "show matching brace
 set laststatus=2
+
+function CopyModeOn()
+    :set nolist
+    :set nonumber
+    :set mouse=
+    :GitGutterDisable
+endfunction
+
+function CopyModeOff()
+    :set list
+    :set number
+    :set mouse=a
+    :GitGutterEnable
+endfunction
+
+:command C exec CopyModeOn()
+:command V exec CopyModeOff()
