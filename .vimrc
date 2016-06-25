@@ -35,7 +35,6 @@ colorscheme luna-term
 set ts=4
 set shiftwidth=4
 set expandtab
-set term=screen-256color
 set list
 set listchars=tab:▸-,eol:¬,space:·
 set autoindent
