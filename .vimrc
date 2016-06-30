@@ -7,11 +7,9 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin()
-"Plug 'valloric/youcompleteme'
-Plug 'Lokaltog/powerline'
-Plug 'MattesGroeger/vim-bookmarks' "see vimawesome.com for documentation
-Plug 'SirVer/ultisnips'
-Plug 'Valloric/YouCompleteMe', {'do': './install.py' }
+Plug 'mattesgroeger/vim-bookmarks' "see vimawesome.com for documentation
+Plug 'sirver/ultisnips'
+Plug 'valloric/youcompleteme', {'do': './install.py' }
 Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
 Plug 'bling/vim-airline'
