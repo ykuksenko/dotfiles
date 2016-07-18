@@ -7,28 +7,71 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin()
-Plug 'mattesgroeger/vim-bookmarks' "see vimawesome.com for documentation
-Plug 'sirver/ultisnips'
-Plug 'valloric/youcompleteme', {'do': './install.py' }
+" Plug 'altercation/vim-colors-solarized'
+" Plug 'ciaranm/inkpot'
 Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
-Plug 'bling/vim-airline'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'ervandew/supertab'
 Plug 'godlygeek/tabular'
 Plug 'honza/vim-snippets'
 Plug 'majutsushi/tagbar'
+Plug 'mattesgroeger/vim-bookmarks' "see vimawesome.com for documentation
 Plug 'mileszs/ack.vim'
+Plug 'mitsuhiko/vim-jinja'
+Plug 'mitsuhiko/vim-python-combined'
 Plug 'nvie/vim-flake8'
+Plug 'othree/html5.vim'
+Plug 'pangloss/vim-javascript'
 Plug 'pearofducks/ansible-vim'
 Plug 'powerline/powerline'
 Plug 'rodjek/vim-puppet'
 Plug 'scrooloose/syntastic'
+Plug 'sirver/ultisnips'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'valloric/youcompleteme', {'do': './install.py' }
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 syntax on
+filetype plugin indent on
+scriptencoding utf-8
+
+set noswapfile
+set title
+set spell spelllang=en_us
+set background=dark
+set colorcolumn=80
+set nowrap
+set shiftwidth=2
+set smarttab
+set softtabstop=2
+set tabstop=2
+
+autocmd BufRead,BufNewFile *.css setlocal ts=2 sw=2 sts=2
+autocmd BufRead,BufNewFile *.html setlocal ts=2 sw=2 sts=2
+autocmd BufRead,BufNewFile *.jinja setlocal ft=htmljinja ts=2 sw=2 sts=2
+autocmd BufRead,BufNewFile *.js setlocal ts=2 sw=2 sts=2
+autocmd BufRead,BufNewFile *.less setlocal ft=less ts=2 sw=2 sts=2
+autocmd BufRead,BufNewFile *.md setlocal ft=markdown
+autocmd BufRead,BufNewFile *.tst setlocal syntax=perl
+autocmd BufRead,BufNewFile *.txt setlocal printoptions+=number:n
+autocmd BufRead,BufNewFile *.scss setlocal ft=scss ts=2 sw=2 sts=2
+autocmd BufRead,BufNewFile Vagrantfile setlocal ft=ruby ts=2 sw=2 sts=2
+
+autocmd BufRead,BufNewFile Build* setlocal noexpandtab filetype=make syntax=make
+autocmd BufRead,BufNewFile [Mm]ake* setlocal noexpandtab filetype=make syntax=make
+autocmd FileType crontab set backupcopy=yes
+
+" Remove all trailing whitespace
+autocmd BufWritePre * :%s/\s\+$//e
+
+
+
+
 colorscheme luna-term
 set ts=4
 set shiftwidth=4
