@@ -1,3 +1,9 @@
+set nocompatible    "required for additional functionality
+filetype off        "requider for additional functionality
+  "https://realpython.com/blog/python/vim-and-python-a-match-made-in-heaven/
+
+filetype plugin indent on
+
 "autocmd Filetype pp setlocal ts=2 sw=2 expandtab
 call plug#begin('~/.vim/plugged')
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -29,6 +35,7 @@ Plug 'powerline/powerline'
 Plug 'rodjek/vim-puppet'
 Plug 'scrooloose/syntastic'
 Plug 'sirver/ultisnips'
+Plug 'tmhedberg/SimpylFold'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'valloric/youcompleteme', {'do': './install.py' }
@@ -39,6 +46,13 @@ call plug#end()
 syntax on
 filetype plugin indent on
 scriptencoding utf-8
+
+
+" Enable folding
+set foldmethod=indent
+set foldlevel=99
+" Enable folding with the spacebar
+nnoremap <space> za
 
 set noswapfile
 set title
@@ -68,9 +82,6 @@ autocmd FileType crontab set backupcopy=yes
 
 " Remove all trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
-
-
-
 
 colorscheme luna-term
 set ts=4
