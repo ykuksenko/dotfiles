@@ -6,3 +6,4 @@ fi
 # User specific environment and startup programs
 PATH=$PATH:$HOME/.local/bin:$HOME/bin
 export PATH
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
