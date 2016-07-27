@@ -103,6 +103,7 @@ set mouse=a
 set cursorline "underline the line where the cursor is
 set showmatch "show matching brace
 set laststatus=2
+let &titleold=getcwd()
 
 function CopyModeOn()
     :set nolist
