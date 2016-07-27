@@ -1,6 +1,7 @@
 [user]
   name = Yevgeniy Kuksenko
   email = ykuksenko@gmail.com
+
 [alias]
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
   lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
@@ -16,3 +17,5 @@
   default = simple
 [merge]
   tool = vimdiff
+[diff]
+  algorithm = patience
