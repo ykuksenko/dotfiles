@@ -6,6 +6,9 @@
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
   lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
   stat = status --short --branch
+  d = diff
+  dt = difftool
+  dg = difftool --gui
 [color]
   branch = auto
   diff = auto
@@ -17,5 +20,15 @@
   default = simple
 [merge]
   tool = vimdiff
+  guitool = meld
 [diff]
   algorithm = patience
+  tool = customvim
+  guitool = meld
+[difftool "customvim"]
+  cmd = vim -R -f -d \"$LOCAL\" \"$REMOTE\"
+  prompt = true
+[pager]
+  log = diff-so-fancy | less --tabs=4 -RFX
+  show = diff-so-fancy | less --tabs=4 -RFX
+  diff = diff-so-fancy | less --tabs=4 -RFX

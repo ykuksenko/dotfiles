@@ -17,6 +17,7 @@ call plug#begin()
 " Plug 'ciaranm/inkpot'
 Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
+Plug 'chrisbra/vim-diff-enhanced'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'ervandew/supertab'
@@ -71,6 +72,11 @@ set shiftwidth=2
 set smarttab
 set softtabstop=2
 set tabstop=2
+
+" started In Diff-Mode set diffexpr (plugin not loaded yet)
+if &diff
+    let &diffexpr='EnhancedDiff#Diff("git diff", "--diff-algorithm=patience")'
+endif
 
 autocmd BufRead,BufNewFile *.css setlocal ts=2 sw=2 sts=2
 autocmd BufRead,BufNewFile *.html setlocal ts=2 sw=2 sts=2
