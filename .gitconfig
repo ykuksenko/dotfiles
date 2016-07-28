@@ -6,6 +6,8 @@
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
   lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
   stat = status --short --branch
+  s = status --short --branch
+  b = branch
   d = diff
   dt = difftool
   dg = difftool --gui
