@@ -2,7 +2,6 @@ set nocompatible    "required for additional functionality
 filetype off        "requider for additional functionality
   "https://realpython.com/blog/python/vim-and-python-a-match-made-in-heaven/
 
-filetype plugin indent on
 
 "autocmd Filetype pp setlocal ts=2 sw=2 expandtab
 call plug#begin('~/.vim/plugged')
@@ -64,7 +63,8 @@ nnoremap <space> za
 
 set noswapfile
 set title
-set spell spelllang=en_us
+"set spell spelllang=en_us
+set nospell
 set background=dark
 set colorcolumn=80
 set nowrap
@@ -101,8 +101,7 @@ set ts=4
 set shiftwidth=4
 set expandtab
 set list
-set listchars=tab:▸-,eol:¬,space:·
-set autoindent
+set listchars=tab:▸\ ,eol:¬,space:·
 set smartcase
 set number
 set mouse=a
